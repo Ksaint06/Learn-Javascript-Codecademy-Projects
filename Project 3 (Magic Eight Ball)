@@ -1,0 +1,59 @@
+//Define variable userName
+
+let userName = '';
+
+/*Create Ternary Expression for if user enters name or not*/
+
+userName ? 
+console.log(`Hello, ${userName}!`) :
+console.log(`Hello!`);
+
+/*Create variable userQuestion, with value that is a string that is the question the user wants to ask the Magic Eight Ball */
+
+let userQuestion = 'Dear Magic Eight Ball, am I going to be rich?';
+
+/* Write a console.log() for userQuestion */
+
+console.log(`The question is: ${userQuestion}`);
+
+/*Create variable "randomNumber" and have it equal the expression which generates a random number between 0 and 7. */
+
+let randomNumber = Math.floor(Math.random() * 8);
+
+/* Create variable "eightBall" and set equal to an empty string */
+
+let eightBall = '';
+
+/* Create control flow that takes in value of randomNumber, and assigns eightBall to a reply the Magic Eight Ball would return */
+
+switch (randomNumber) {
+  case 0:
+    eightBall = 'My sources say no';
+    break;
+  case 1:
+    eightBall = 'Outlook not so good';
+    break;
+  case 2:
+    eightBall = 'Do not count on it';
+    break;
+  case 3:
+    eightBall = 'Cannot predict now';
+    break;
+  case 4:
+    eightBall = 'Reply hazy try again';
+    break;
+  case 5:
+    eightBall = 'It is decidedly so';
+    break;
+  case 6:
+    eightBall = 'Signs point to yes';
+    break;
+  case 7:
+    eightBall = 'It is certain';
+    break;
+  default:
+    console.log ('Error - ask again');
+    break; 
+}
+
+console.log(`${eightBall}`);
