@@ -1,0 +1,33 @@
+let input = 'Health is Wealth';
+const vowels = ['a', 'e', 'i', 'o', 'u'];
+let resultArray = [];
+
+
+for (let i = 0; i < input.length; i++){
+ // console.log('i is '+ i);
+ if (input[i] === 'e'){
+   resultArray.push(input[i]);
+ }
+ if (input[i] === 'u'){
+   resultArray.push(input[i]);
+ }
+ for (let j = 0; j < vowels.length; j++){
+  // console.log('j is '+ j);
+  if (input[i] === vowels[j]){
+
+
+    /* Check - log letter matches to console */
+   // console.log(vowels[j]);
+
+
+     resultArray.push(vowels[j]);
+   
+  }
+ }
+}
+
+
+console.log(resultArray);
+let resultString = resultArray.join('');
+resultString = resultString.toUpperCase();
+console.log(resultString);
