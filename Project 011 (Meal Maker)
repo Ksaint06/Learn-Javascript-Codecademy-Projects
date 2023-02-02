@@ -1,0 +1,42 @@
+const menu = {
+  _meal: '',
+ _price: 0,
+
+
+ set meal(mealToCheck) {
+   if (typeof mealToCheck === 'string'){
+     return this._meal = mealToCheck;
+   }
+   else console.log('Your meal must be of type string.');
+ },
+
+
+ set price(priceToCheck) {
+   if (typeof priceToCheck === 'number'){
+     return this._price = priceToCheck;
+   }
+  else console.log('Your price must be of type number.'); 
+ },
+
+
+get todaysSpecial () {
+  if( this._meal && this._price){
+    return (`Today's Special is ${this._meal} Rice for $${this._price}!`);
+  }
+  else return ('Meal or price was not set correctly!');
+}
+};
+
+
+/* Just to test and validate the properties
+menu._meal = 'Walnuts';
+menu._price = 12;
+console.log(menu._meal);
+console.log(menu._price); */
+
+
+//Just to test and validate the properties
+menu.meal = 'Wild Rice';
+menu.price= 11;
+//menu.todaysSpecial;
+console.log(menu.todaysSpecial);
