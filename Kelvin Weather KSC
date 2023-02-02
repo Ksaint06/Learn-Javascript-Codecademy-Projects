@@ -1,0 +1,25 @@
+/* Establish Constant Variable Kelvin */
+
+const kelvin = 270;
+
+/* Variable Celsisus is 273 less than Kelvin */
+
+const celsius = (kelvin - 273);
+
+/* Set Variable and Equation for Fahrenheit */
+
+let fahrenheit;
+fahrenheit = (celsius * (9/5) + 32);
+
+/* Round down Fahrenheit temp to nearest integer */
+
+fahrenheit = Math.floor(fahrenheit);
+console.log(`The temperature is ${fahrenheit} degrees Fahrenheit.`);
+
+/*Test your results with Kelvin as other numbers by changing it at the top of the program */
+
+/* Extra Practice: Converting Celsius to Newton Scale */
+
+let newton = celsius * (33/100);
+newton = Math.floor(newton);
+console.log(`The temperature is ${newton} degrees Newton.`);
