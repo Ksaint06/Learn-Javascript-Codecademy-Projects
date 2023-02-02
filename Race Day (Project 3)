@@ -1,0 +1,44 @@
+/* Random Assignment of Race Number */
+
+let raceNumber = Math.floor(Math.random() * 1000);
+
+/* Create variable for early registered runners */
+
+let earlyRegistrant = false;
+
+/* Create variable for runners age and set to any number, it'll change later */
+
+let runnersAge = 17;
+
+/* Create control flow statement that checks whether the runner is over 18 and registered early */
+
+if (runnersAge > 18 && earlyRegistrant === true) {
+  raceNumber = (raceNumber + 1000);
+} else {
+  }
+
+/* Create separate control flow statement that checks age and registration time to determine race time. */
+
+if (runnersAge > 18 && earlyRegistrant === true) {
+  console.log(`Thank you for being early runner ${raceNumber}, your start time is 9:30am.`);
+}
+
+/* Else if for adult runners that did not register early */
+
+else if (runnersAge > 18 && earlyRegistrant === false) {
+  console.log(`Thank you for coming today runner ${raceNumber}, your start time will be at 11:00am. `);
+}
+
+/*Else if for youth registrants, anyone under 18 runs at 12:30pm */
+
+else if (runnersAge < 18){
+  console.log(`Thank you for participating in our youth race runner ${raceNumber}, your start time will be at 12:30pm.`);
+}
+
+/* Else if runner is exactly 18 */
+
+else if (runnersAge === 18) {
+  console.log(`Please see the registration desk.`);
+}
+else {
+}
