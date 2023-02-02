@@ -1,0 +1,35 @@
+/* Establishing variable that is indicative of how old I am */
+
+const myAge = 8;
+
+/* Establishing variable earlyYears which is subject to change */
+
+let earlyYears = 2;
+earlyYears = earlyYears * 10.5;
+// or earlyYears *= 10.5;
+
+/*Establishing variable called laterYears */
+
+let laterYears = myAge - 2;
+
+/* Multiplying laterYears by 4 to calculate the number of dog years accounted for by your later years */
+
+laterYears = laterYears * 4;
+// or lateryears *= 4;
+console.log(earlyYears);
+console.log(laterYears);
+
+/* Establishing variable that adds early years and later years together
+ */
+ 
+var myAgeInDogYears = earlyYears + laterYears;
+
+/* Write name as a string, stored in variable MyName */
+
+var myName = "Khalfani".toLowerCase();
+
+/* Displaying name and age in dog years using string interpolation */
+
+console.log(
+  `My name is ${myName}. I am ${myAge} years old in human years which is ${myAgeInDogYears} years old in dog years.`
+);
