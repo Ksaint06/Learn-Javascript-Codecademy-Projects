@@ -1,0 +1,84 @@
+/* Create function named getSleepHours with single parameter named day */
+
+/* This function accepts day as an argument and returns the number of hours you slept that night. */
+
+
+const getSleepHours = day => {
+day = day.toLowerCase();
+switch (day) {
+  case 'monday':
+    return 8;
+    break;
+  case 'tuesday':
+    return 9;
+    break;
+  case 'wednesday': 
+    return 7;
+    break;
+  case 'thursday': 
+    return 6;
+    break;
+  case 'friday': 
+    return 7;
+    Break;
+  case 'saturday': 
+    return 10;
+    break;
+  case 'sunday': 
+    return 9;
+    break;
+  default:
+    console.log('Error! Please enter a day of the week.');
+    break;
+}
+};
+
+// Test function 
+//console.log(getSleepHours('sunday'));
+
+/* New function getActualSleepHours that takes no parameters and gets total sleep hours for the week */
+
+
+const getActualSleepHours = () =>
+getSleepHours ('monday') 
++ getSleepHours ('tuesday')
++ getSleepHours ('wednesday')
++ getSleepHours ('thursday')
++ getSleepHours ('friday')
++ getSleepHours ('saturday')
++ getSleepHours ('sunday');
+;
+
+//Testing function getActualSleepHours
+//console.log(getActualSleepHours());
+
+/* Create function getIdealSleepHours with no parameters. Declare variable idealHours. Return the idealHours multiplied by 7. */
+
+const getIdealSleepHours = () => {
+  let idealHours = 9;
+  return idealHours * 7;
+};
+
+// Testing function getIdealSleepHours
+// console.log(getIdealSleepHours());
+
+/* Create function calculateSleepDebt with no parameters */
+
+
+const calculateSleepDebt = () => {
+  let actualSleepHours = getActualSleepHours();
+  let idealSleepHours = getIdealSleepHours();
+if (actualSleepHours === idealSleepHours) {
+  console.log ('Seems like you got the perfect amount of sleep this week!');
+}
+if (actualSleepHours > idealSleepHours) {
+  console.log ('Seems like you slept more than you needed to. You overslept by ' + (actualSleepHours - idealSleepHours) + ' hours this week.');
+}
+if (actualSleepHours < idealSleepHours) {
+  console.log ('Seems like you should get more rest. You underslept by ' + (idealSleepHours - actualSleepHours) + ' hours this week.');
+}
+};
+
+
+//Testing function calculateSleepDebt
+calculateSleepDebt();
